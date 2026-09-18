@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>占い師ルナ｜あなたの物語を 星に聞く</title>
+<meta name="description" content="今のあなたに寄り添う、占い師ルナの無料鑑定。星座占い・四柱推命・タロットから、迷いやこれからの歩みを一緒に見つめます。">
+<meta name="theme-color" content="#171d2c">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600&display=swap">
+<style>
+:root{--bg:#f4f0e8;--text:#303541;--text-muted:#626674;--border:#d8d0c2;--accent:#303e51;--danger:#a03939;--gold:#cfb986;--night:#171d2c}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--text);font-family:'Hiragino Sans','Yu Gothic',sans-serif;font-size:15px;line-height:2}h1,h2,h3,.brand,.eyebrow{font-family:'Shippori Mincho','Yu Mincho',serif;font-weight:500}a{color:inherit}button,input,select,textarea{font:inherit}a,button,input,select,textarea{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #a67d36;outline-offset:5px}header.top{position:absolute;top:0;left:0;right:0;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:24px clamp(24px,6vw,88px);color:#f3eee3}.brand{font-size:25px;letter-spacing:.18em;text-decoration:none}.brand .dot{color:var(--gold);margin-right:10px}.cta-link{font-size:12px;letter-spacing:.09em;text-decoration:none;border-bottom:1px solid #a59981;padding:4px 0}.wrap{overflow:hidden}section{max-width:960px;margin:auto;padding:88px 36px}.hero{max-width:none;min-height:730px;padding:180px 24px 100px;text-align:center;position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 50% 30%,#31334a 0,#20283a 40%,var(--night) 78%);color:#f7f0e2}.hero:after{content:'';position:absolute;inset:18px;border:1px solid #cbb68822;pointer-events:none;z-index:-1}.celestial{position:absolute;width:660px;height:660px;left:50%;top:32px;transform:translateX(-50%);color:#cbb688;opacity:.30;z-index:-1}.stars{position:absolute;inset:0;z-index:-1;background-image:radial-gradient(1px 1px at 12% 25%,#e5d3a8 80%,transparent),radial-gradient(1px 1px at 79% 19%,#e5d3a8 80%,transparent),radial-gradient(2px 2px at 86% 62%,#e5d3a8 80%,transparent),radial-gradient(1px 1px at 20% 78%,#e5d3a8 80%,transparent),radial-gradient(1px 1px at 33% 12%,#e5d3a8 80%,transparent)}.moon-orb{width:56px;height:56px;margin:0 auto 32px;border-radius:50%;box-shadow:inset 12px -5px 0 0 #e4d0a3;transform:rotate(-22deg)}.eyebrow{letter-spacing:.3em;font-size:14px;color:var(--gold);margin:0 0 20px}.hero h1{font-size:clamp(29px,4.5vw,49px);line-height:1.9;letter-spacing:.16em;margin:0 0 23px}.hero h1 span{display:block}.hero .lead{color:#d0ced3;font-size:14px;letter-spacing:.07em;max-width:29em;margin:0 auto 34px}.btn-primary{display:inline-block;border:1px solid #c4ac7a;background:#c4ac7a;color:#202635;text-decoration:none;padding:16px 40px;font-weight:500;font-size:14px;letter-spacing:.1em;cursor:pointer;transition:background .2s}.btn-primary:hover{background:#ddc89e}.section-head{margin-bottom:34px}.section-head h2{font-size:28px;letter-spacing:.1em;line-height:1.65;margin:0}.about{display:grid;grid-template-columns: .9fr 1.1fr;align-items:center;gap:64px;padding-top:110px;padding-bottom:110px}.portrait{margin:0;position:relative}.portrait img{width:100%;height:auto;display:block;border-radius:22px}.about p{font-size:14px;margin:0 0 20px}.methods{border-top:1px solid var(--border);padding-top:70px}.methods-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}.method-card{padding-top:24px;border-top:1px solid #b7a885}.method-card h3{font-size:22px;margin:0 0 16px;letter-spacing:.1em}.method-card p{font-size:13px;color:var(--text-muted);margin:0}section.flow{padding-top:32px}.flow-step{display:flex;gap:26px;border-top:1px solid var(--border);padding:24px 0}.flow-step:last-child{border-bottom:1px solid var(--border)}.flow-num{font-family:Georgia,serif;font-style:italic;color:#8c7853;font-size:24px;line-height:1.6}.flow-step h3{font-size:17px;margin:0 0 5px}.flow-step p{font-size:13px;color:var(--text-muted);margin:0}#form{max-width:none;background:#e9e5dd;padding:76px 24px 84px}#form>.section-head{max-width:640px;margin:0 auto 30px}.form-card{max-width:640px;margin:auto}.form-note{font-size:12px;color:var(--text-muted);margin-bottom:32px}.form-note p{margin:0 0 5px}.field{margin-bottom:26px}.field>label,.field legend{display:block;font-size:13px;margin-bottom:9px;font-weight:500}.field .req,.field .opt{font-size:10px;margin-left:10px;color:#7c5a42}.field input[type=text],.field input[type=email],.field select,.field textarea{width:100%;color:var(--text);background:#faf8f3;border:1px solid #c7c1b6;border-radius:2px;padding:12px;font-size:16px}.field textarea{min-height:114px;resize:vertical}.date-row{display:flex;gap:10px}.date-row select{flex:1;min-width:0}.radio-row{display:flex;flex-wrap:wrap;gap:12px 24px}.radio-pill{font-size:13px;cursor:pointer;display:flex;align-items:center;gap:8px}.radio-pill input{accent-color:var(--accent);width:16px;height:16px}.field-error{color:var(--danger);font-size:12px;margin:7px 0 0;display:none}.field-error.show,.submit-error.show{display:block}.submit-row{margin-top:36px}.submit-row .btn-primary{width:100%;background:var(--accent);color:#fff;border-color:var(--accent)}.submit-row .btn-primary:hover{background:#46566d}.submit-row .btn-primary:disabled{opacity:.6;cursor:wait}.submit-error{display:none;color:var(--danger);font-size:13px}.thanks{display:none;padding:30px 0;text-align:center}.thanks.show{display:block}.thanks h3{font-size:23px}.thanks p{font-size:14px}.faq{max-width:712px}.faq-item{border-bottom:1px solid var(--border);padding:24px 0}.faq-item h3{font-family:inherit;font-size:14px;font-weight:500;margin:0 0 10px}.faq-item p{font-size:13px;color:var(--text-muted);margin:0}footer{background:var(--night);color:#e1d5bc;text-align:center;padding:44px 24px calc(38px + env(safe-area-inset-bottom,0px))}footer .brand{display:block;font-size:22px}footer p{font-size:11px;letter-spacing:.12em}footer a{text-underline-offset:5px}.skip{position:absolute;left:12px;top:-100px;z-index:10;background:white;padding:8px}.skip:focus{top:12px}
+@media(max-width:640px){header.top{padding:22px 27px}.brand{font-size:21px}.cta-link{font-size:11px}.hero{min-height:660px;padding:150px 26px 74px}.hero h1{font-size:31px;letter-spacing:.12em}.hero .lead{max-width:22em;font-size:13px}.celestial{width:540px;height:540px;top:65px}section{padding:60px 27px}.about{grid-template-columns:1fr;gap:38px;padding:72px 30px}.portrait{max-width:340px;width:100%;margin:auto}.about .section-head{margin-bottom:24px}.section-head h2{font-size:25px}.methods-grid{grid-template-columns:1fr;gap:28px}.method-card{display:grid;grid-template-columns:95px 1fr;gap:20px;padding-top:25px}.method-card h3{font-size:19px}.method-card p{font-size:13px}.flow-step{gap:18px}.flow-step h3{font-size:16px}#form{padding:60px 26px}.radio-row{gap:12px 18px}.btn-primary{padding:16px 28px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Small celestial details carry the night-sky motif through the page. */
+.moon-trail{display:block;width:112px;height:34px;margin:0 0 17px;color:#9a7e48;overflow:visible;pointer-events:none}
+.methods .moon-trail,.faq .moon-trail{transform:scaleX(-1)}
+.about,.methods,section.flow,.faq{background-image:radial-gradient(circle at 96% 34%,#baa16a66 0 1px,transparent 1.8px),radial-gradient(circle at 98% 39%,#baa16a44 0 1px,transparent 1.8px),radial-gradient(circle at 3% 85%,#baa16a55 0 1px,transparent 1.8px)}
+#form{background-image:radial-gradient(ellipse at 95% 8%,#cfb98620,transparent 42%)}
+@media(prefers-reduced-motion:no-preference){
+  .glimmer{animation:starlight 5s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+  .glimmer.later{animation-delay:-2.5s}
+  @keyframes starlight{0%,100%{opacity:.35;transform:scale(.85)}50%{opacity:1;transform:scale(1.08)}}
+}
+/* Comfortable reading and touch targets on small screens. */
+body{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.about-copy,.method-card,.flow-step>div{min-width:0}
+.radio-pill{min-height:44px}
+.cta-link{min-height:44px;display:inline-flex;align-items:center}
+@media(min-width:641px) and (max-width:900px){
+  .about{gap:32px;grid-template-columns:.85fr 1.15fr}
+  .methods-grid{gap:22px}
+}
+@media(max-width:640px){
+  .hero h1{font-size:clamp(26px,7.8vw,31px)}
+  .section-head h2{font-size:clamp(22px,6.2vw,25px)}
+  .about p,.method-card p,.flow-step p,.faq-item p{font-size:15px;line-height:1.95}
+  .method-card{display:block}
+  .method-card h3{margin-bottom:10px;font-size:21px}
+  .field>label,.field legend,.radio-pill,.faq-item h3{font-size:14px}
+  .form-note{font-size:13px}
+  .date-row{gap:6px}
+  .date-row select{padding:12px 6px}
+  .date-row select:first-child{flex:1.35}
+}
+@media(max-width:360px){
+  section{padding-inline:22px}
+  .about,#form{padding-inline:22px}
+  header.top{padding-inline:22px}
+  .hero{padding-inline:22px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#form">鑑定のお申し込みへ</a>
+
+<header class="top">
+  <span class="brand"><span class="dot">☾</span>ルナ</span>
+  <a class="cta-link" href="#form">無料鑑定はこちら</a>
+</header>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="stars" aria-hidden="true"></div>
+    <svg class="celestial" viewBox="0 0 660 660" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width=".7"><circle cx="330" cy="330" r="302"/><circle cx="330" cy="330" r="285" stroke-dasharray="1 12"/><circle cx="330" cy="330" r="263"/><path d="M330 16v28m0 572v28M16 330h28m572 0h28M108 108l20 20m404 404 20 20M108 552l20-20m404-404 20-20M83 230l61-54 62 18 40-66M460 496l61-39 45 27"/></g><g fill="currentColor"><circle cx="83" cy="230" r="3"/><circle cx="144" cy="176" r="3"/><circle cx="206" cy="194" r="2"/><circle cx="246" cy="128" r="3"/><circle cx="460" cy="496" r="3"/><circle cx="521" cy="457" r="3"/><circle cx="566" cy="484" r="2"/></g></svg>
+    <div class="moon-orb" aria-hidden="true"></div>
+    <p class="eyebrow">占い師 ルナ</p>
+    <h1 aria-label="あなたの物語を　星に聞く"><span>あなたの物語を</span><span>星に聞く</span></h1>
+    <p class="lead">今のあなたに寄り添う<br>無料鑑定を届けています</p>
+    <a class="btn-primary" href="#form">無料鑑定に申し込む</a>
+  </section>
+
+  <section class="about">
+    <figure class="portrait"><img src="IMG_2800.jpg" width="905" height="768" alt="占い師ルナのプロフィール写真" loading="lazy"></figure>
+    <div class="about-copy">
+    <div class="section-head">
+      <svg class="moon-trail" viewBox="0 0 128 38" fill="none" aria-hidden="true" focusable="false">
+        <path d="M24 4a15 15 0 1 0 9 26A16 16 0 0 1 24 4Z" fill="currentColor" opacity=".65"/>
+        <path d="m55 19 15-7 22 11 23-9" stroke="currentColor" stroke-width=".6" opacity=".4"/>
+        <path class="glimmer" d="m70 7 1.3 3.7L75 12l-3.7 1.3L70 17l-1.3-3.7L65 12l3.7-1.3Z" fill="currentColor"/>
+        <path class="glimmer later" d="m115 9 1.3 3.7L120 14l-3.7 1.3L115 19l-1.3-3.7L110 14l3.7-1.3Z" fill="currentColor"/>
+        <circle cx="55" cy="19" r="1.3" fill="currentColor"/><circle cx="92" cy="23" r="1.5" fill="currentColor"/>
+      </svg>
+      <h2>ルナについて</h2>
+    </div>
+    <p>はじめまして、ルナです。日々たくさんの「今のわたし、どうすればいいんだろう」という声に向き合っています。</p>
+    <p>占いは、正解をぴたりと言い当てるものではなく、あなたが「本当はどうしたいか」に気づくための鏡のようなものだと思っています。決めつけず、否定せず、あなたのペースで一緒に考えることを大切にしています。</p>
+    </div>
+  </section>
+
+  <section class="methods">
+    <div class="section-head">
+      <svg class="moon-trail" viewBox="0 0 128 38" fill="none" aria-hidden="true" focusable="false">
+        <path d="M24 4a15 15 0 1 0 9 26A16 16 0 0 1 24 4Z" fill="currentColor" opacity=".65"/>
+        <path d="m55 19 15-7 22 11 23-9" stroke="currentColor" stroke-width=".6" opacity=".4"/>
+        <path class="glimmer" d="m70 7 1.3 3.7L75 12l-3.7 1.3L70 17l-1.3-3.7L65 12l3.7-1.3Z" fill="currentColor"/>
+        <path class="glimmer later" d="m115 9 1.3 3.7L120 14l-3.7 1.3L115 19l-1.3-3.7L110 14l3.7-1.3Z" fill="currentColor"/>
+        <circle cx="55" cy="19" r="1.3" fill="currentColor"/><circle cx="92" cy="23" r="1.5" fill="currentColor"/>
+      </svg>
+      <h2>鑑定でお伝えできること</h2>
+    </div>
+    <div class="methods-grid">
+      <div class="method-card">
+        <h3>星座占い</h3>
+        <p>生まれた瞬間の星の配置から、あなたの本質的な性格や才能、これからの運気の流れを読み解きます。</p>
+      </div>
+      <div class="method-card">
+        <h3>四柱推命</h3>
+        <p>生年月日から導く「命式」を用いて、あなたが持つ運命の傾向や、人生の転機となるタイミングを紐解きます。</p>
+      </div>
+      <div class="method-card">
+        <h3>タロット</h3>
+        <p>カードに映し出されるメッセージから、今のあなたの心の状態や、迷っている物事へのヒントを届けます。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="flow">
+    <div class="section-head">
+      <svg class="moon-trail" viewBox="0 0 128 38" fill="none" aria-hidden="true" focusable="false">
+        <path d="M24 4a15 15 0 1 0 9 26A16 16 0 0 1 24 4Z" fill="currentColor" opacity=".65"/>
+        <path d="m55 19 15-7 22 11 23-9" stroke="currentColor" stroke-width=".6" opacity=".4"/>
+        <path class="glimmer" d="m70 7 1.3 3.7L75 12l-3.7 1.3L70 17l-1.3-3.7L65 12l3.7-1.3Z" fill="currentColor"/>
+        <path class="glimmer later" d="m115 9 1.3 3.7L120 14l-3.7 1.3L115 19l-1.3-3.7L110 14l3.7-1.3Z" fill="currentColor"/>
+        <circle cx="55" cy="19" r="1.3" fill="currentColor"/><circle cx="92" cy="23" r="1.5" fill="currentColor"/>
+      </svg>
+      <h2>ご利用の流れ</h2>
+    </div>
+    <div class="flow">
+      <div class="flow-step">
+        <span class="flow-num">01</span>
+        <div>
+          <h3>下記フォームからお申し込み</h3>
+          <p>お名前や生年月日、今の気持ちなどを入力してください。</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <span class="flow-num">02</span>
+        <div>
+          <h3>ルナが一つひとつ丁寧に鑑定</h3>
+          <p>お申し込みいただいた順に鑑定しています。内容によってお時間をいただく場合があります。</p>
+        </div>
+      </div>
+      <div class="flow-step">
+        <span class="flow-num">03</span>
+        <div>
+          <h3>結果をメールでお届け</h3>
+          <p>鑑定結果は、ご入力いただいたメールアドレス宛にお送りします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="form">
+    <div class="section-head">
+      <svg class="moon-trail" viewBox="0 0 128 38" fill="none" aria-hidden="true" focusable="false">
+        <path d="M24 4a15 15 0 1 0 9 26A16 16 0 0 1 24 4Z" fill="currentColor" opacity=".65"/>
+        <path d="m55 19 15-7 22 11 23-9" stroke="currentColor" stroke-width=".6" opacity=".4"/>
+        <path class="glimmer" d="m70 7 1.3 3.7L75 12l-3.7 1.3L70 17l-1.3-3.7L65 12l3.7-1.3Z" fill="currentColor"/>
+        <path class="glimmer later" d="m115 9 1.3 3.7L120 14l-3.7 1.3L115 19l-1.3-3.7L110 14l3.7-1.3Z" fill="currentColor"/>
+        <circle cx="55" cy="19" r="1.3" fill="currentColor"/><circle cx="92" cy="23" r="1.5" fill="currentColor"/>
+      </svg>
+      <h2>無料鑑定に申し込む</h2>
+    </div>
+
+    <div class="form-card">
+      <div class="form-note">
+        <p>順番に鑑定してお届けするため、結果のお届けまでお時間をいただく場合があります。</p>
+      </div>
+
+      <form id="visibleForm" novalidate>
+        <div class="field">
+          <label for="v_name">お名前（ニックネームでも構いません）<span class="req">必須</span></label>
+          <input type="text" id="v_name" autocomplete="nickname" required>
+          <p class="field-error" data-for="v_name">お名前を入力してください。</p>
+        </div>
+
+        <div class="field">
+          <label>生年月日<span class="req">必須</span></label>
+          <div class="date-row">
+            <select id="v_year" aria-label="年" required></select>
+            <select id="v_month" aria-label="月" required></select>
+            <select id="v_day" aria-label="日" required></select>
+          </div>
+          <p class="field-error" data-for="v_date">生年月日を正しく選択してください。</p>
+        </div>
+
+        <div class="field">
+          <label>性別<span class="req">必須</span></label>
+          <div class="radio-row" id="v_gender_row">
+            <label class="radio-pill"><input type="radio" name="v_gender" value="女性">女性</label>
+            <label class="radio-pill"><input type="radio" name="v_gender" value="男性">男性</label>
+            <label class="radio-pill"><input type="radio" name="v_gender" value="回答したくない">回答したくない</label>
+          </div>
+          <p class="field-error" data-for="v_gender">いずれかを選択してください。</p>
+        </div>
+
+        <div class="field">
+          <label for="v_concern">今一番気になっていること<span class="req">必須</span></label>
+          <textarea id="v_concern" required></textarea>
+          <p class="field-error" data-for="v_concern">内容を入力してください。</p>
+        </div>
+
+        <div class="field">
+          <label for="v_direction">今後どんな方向に進んでいきたいですか？<span class="req">必須</span></label>
+          <textarea id="v_direction" required></textarea>
+          <p class="field-error" data-for="v_direction">内容を入力してください。</p>
+        </div>
+
+        <div class="field">
+          <label for="v_email">メールアドレス<span class="req">必須</span></label>
+          <input type="email" id="v_email" autocomplete="email" inputmode="email" required>
+          <p class="field-error" data-for="v_email">メールアドレスを入力してください。</p>
+        </div>
+
+        <div class="field">
+          <label for="v_email2">メールアドレス（確認用）<span class="req">必須</span></label>
+          <input type="email" id="v_email2" autocomplete="off" inputmode="email" required>
+          <p class="field-error" data-for="v_email2">メールアドレスが一致しません。</p>
+        </div>
+
+        <div class="field">
+          <label for="v_partner">パートナーや気になる人がいる場合<span class="opt">任意</span></label>
+          <input type="text" id="v_partner">
+        </div>
+
+        <div class="submit-row">
+          <button type="submit" class="btn-primary" id="submitBtn">無料鑑定に申し込む</button>
+          <p class="submit-error" id="submitError" role="alert">送信に失敗しました。通信状態をご確認のうえ、もう一度お試しください。</p>
+        </div>
+      </form>
+
+      <div class="thanks" id="thanks" role="status" tabindex="-1">
+        <h3>お申し込みが完了しました</h3>
+        <p>ご入力いただいたメールアドレス宛に、鑑定結果をお届けします。順番に鑑定しているため、お届けまでお時間をいただく場合がありますが、今しばらくお待ちください。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="section-head">
+      <svg class="moon-trail" viewBox="0 0 128 38" fill="none" aria-hidden="true" focusable="false">
+        <path d="M24 4a15 15 0 1 0 9 26A16 16 0 0 1 24 4Z" fill="currentColor" opacity=".65"/>
+        <path d="m55 19 15-7 22 11 23-9" stroke="currentColor" stroke-width=".6" opacity=".4"/>
+        <path class="glimmer" d="m70 7 1.3 3.7L75 12l-3.7 1.3L70 17l-1.3-3.7L65 12l3.7-1.3Z" fill="currentColor"/>
+        <path class="glimmer later" d="m115 9 1.3 3.7L120 14l-3.7 1.3L115 19l-1.3-3.7L110 14l3.7-1.3Z" fill="currentColor"/>
+        <circle cx="55" cy="19" r="1.3" fill="currentColor"/><circle cx="92" cy="23" r="1.5" fill="currentColor"/>
+      </svg>
+      <h2>よくある質問</h2>
+    </div>
+    <div class="faq-item">
+      <h3>本当に無料ですか？</h3>
+      <p>はい、初回の鑑定は無料です。届いた鑑定結果を読んでいただき、ご自身に合うかどうかをじっくり確かめていただければと思っています。</p>
+    </div>
+    <div class="faq-item">
+      <h3>結果はいつ届きますか？</h3>
+      <p>お申し込みいただいた順に、一つひとつ丁寧に鑑定しています。内容によってお届けまでお時間をいただく場合がありますが、必ずメールでお届けします。</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span class="brand">☾ ルナ</span>
+</footer>
+
+
+<script>
+(function(){
+  var GAS_ENDPOINT='https://script.google.com/macros/s/AKfycbzSSz38_jCI8wWtCM8kr1f7uEWamYPWG2fGMFX7ferMO3Vqzi0wChXH_yL45SuMAIZalA/exec';
+
+  try{
+    // populate date selects
+    var ySel=document.getElementById('v_year');
+    var mSel=document.getElementById('v_month');
+    var dSel=document.getElementById('v_day');
+    var nowY=new Date().getFullYear();
+    var opt=function(sel,val,label){var o=document.createElement('option');o.value=val;o.textContent=label;sel.appendChild(o);};
+    opt(ySel,'','年');
+    for(var y=nowY;y>=nowY-90;y--){opt(ySel,y,y+'年');}
+    opt(mSel,'','月');
+    for(var m=1;m<=12;m++){opt(mSel,m,m+'月');}
+    opt(dSel,'','日');
+    function updateDays(){
+      var selected=dSel.value;
+      var days=mSel.value?new Date(Number(ySel.value)||2000,Number(mSel.value),0).getDate():31;
+      dSel.replaceChildren();opt(dSel,'','日');
+      for(var d=1;d<=days;d++){opt(dSel,d,d+'日');}
+      if(Number(selected)<=days)dSel.value=selected;
+    }
+    updateDays();ySel.addEventListener('change',updateDays);mSel.addEventListener('change',updateDays);
+  }catch(e){}
+
+  // radio pill highlight
+  try{
+    var pills=document.querySelectorAll('#v_gender_row .radio-pill');
+    pills.forEach(function(p){
+      var input=p.querySelector('input');
+      input.addEventListener('change',function(){
+        pills.forEach(function(pp){pp.classList.remove('checked');});
+        if(input.checked)p.classList.add('checked');
+      });
+    });
+  }catch(e){}
+
+  function showError(name,show){
+    try{
+      var el=document.querySelector('.field-error[data-for="'+name+'"]');
+      if(el){el.classList.toggle('show',!!show);}
+    }catch(e){}
+  }
+
+  var form=document.getElementById('visibleForm');
+  var submitBtn=document.getElementById('submitBtn');
+  var submitError=document.getElementById('submitError');
+
+  form.addEventListener('submit',function(ev){
+    ev.preventDefault();
+
+    var name=document.getElementById('v_name').value.trim();
+    var year=document.getElementById('v_year').value;
+    var month=document.getElementById('v_month').value;
+    var day=document.getElementById('v_day').value;
+    var genderInput=document.querySelector('input[name="v_gender"]:checked');
+    var gender=genderInput?genderInput.value:'';
+    var concern=document.getElementById('v_concern').value.trim();
+    var direction=document.getElementById('v_direction').value.trim();
+    var email=document.getElementById('v_email').value.trim();
+    var email2=document.getElementById('v_email2').value.trim();
+    var partner=document.getElementById('v_partner').value.trim();
+
+    var ok=true;
+    var emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    showError('v_name',false);showError('v_date',false);showError('v_gender',false);
+    showError('v_concern',false);showError('v_direction',false);
+    showError('v_email',false);showError('v_email2',false);
+    submitError.classList.remove('show');
+
+    if(!name){showError('v_name',true);ok=false;}
+    if(!year||!month||!day||new Date(+year,+month-1,+day)>new Date()){showError('v_date',true);ok=false;}
+    if(!gender){showError('v_gender',true);ok=false;}
+    if(!concern){showError('v_concern',true);ok=false;}
+    if(!direction){showError('v_direction',true);ok=false;}
+    if(!email||!emailPattern.test(email)){showError('v_email',true);ok=false;}
+    if(!email2||email2!==email){showError('v_email2',true);ok=false;}
+
+    if(!ok){
+      var firstError=form.querySelector('.field-error.show');
+      if(firstError){var field=firstError.closest('.field').querySelector('input,select,textarea');if(field)field.focus();}
+      return;
+    }
+
+    submitBtn.disabled=true;
+    submitBtn.textContent='送信中…';
+
+    var params=new URLSearchParams();
+    params.set('name',name);
+    params.set('year',year);
+    params.set('month',month);
+    params.set('day',day);
+    params.set('gender',gender);
+    params.set('concern',concern);
+    params.set('direction',direction);
+    params.set('email',email);
+    params.set('email2',email2);
+    params.set('partner',partner);
+
+    fetch(GAS_ENDPOINT,{
+      method:'POST',
+      body:params
+    }).then(function(res){
+      return res.text().then(function(text){
+        var data={};
+        try{data=JSON.parse(text);}catch(e){}
+        if(res.ok && data && data.ok){
+          form.style.display='none';
+          document.getElementById('thanks').classList.add('show');
+          document.getElementById('thanks').focus();
+        }else{
+          throw new Error('submit_failed');
+        }
+      });
+    }).catch(function(){
+      submitError.classList.add('show');
+    }).finally(function(){
+      submitBtn.disabled=false;
+      submitBtn.textContent='無料鑑定に申し込む';
+    });
+  });
+})();
+</script>
+</body>
+</html>
